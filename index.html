@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Lanchonete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+            <div class="alert alert-primary" role="alert">
+                Lanchonete Fatec
+            </div>
+                <div class="row">
+                <div class="col-9">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for="mesa" class="form-label">Mesa:</label>
+                    <input type="number" id="mesa" name="mesa" placeholder="Digite sua mesa..." class="form-control" min="1" max="14">
+                </div>
+            </div>
+        <form>   
+            <div class="row">
+                <div class="col-6">
+                    <label for="lanches" class="form-label">Lanches:</label>
+                    <select name="lanches" id="lanches" class="form-select">
+                        <option value="25">Hambúrger</option>
+                        <option value="15">Natural</option>
+                        <option value="15">Misto</option>
+                        <option value="10">Promoção do dia</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="adicionais" class="form-label">Adicionais:</label><br>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="10" id="checkBacon" name="adicionais">
+                        <label class="form-check-label" for="checkBacon">
+                            Bacon
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="5" id="checkPicles" checked name="adicionais">
+                        <label class="form-check-label" for="checkPicles">
+                            Picles
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="5" id="checkQueijo" checked name="adicionais">
+                        <label class="form-check-label" for="checkQueijo">
+                            Queijo
+                        </label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <label for="bebidas" class="form-label">Bebidas:</label>
+                    <select name="bebidas" id="bebidas" class="form-select">
+                        <option value="5">Refrigerante</option>
+                        <option value="10">Suco</option>
+                        <option value="2">Água</option>
+
+                    </select>
+                </div>
+                </div>
+            </div>
+
+        </form>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button" id="calcular" onclick="Calcular()">Calcular</button>
+            <button class="btn btn-primary" type="button" id="calcularDesc">Calcular Com Desconto</button>
+        </div>
+        
+        <div class="row">
+            <div class="col-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metodoReceber" id="radioDefault1">
+                    <label class="form-check-label" for="radioDefault1">
+                        Balcão
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metodoReceber" id="radioDefault2" checked>
+                    <label class="form-check-label" for="radioDefault2">
+                        Retirada
+                    </label>
+                </div>
+            </div>
+            
+        </div>
+        <p id="valorPagar">Valor da conta:</p>
+        <p id="valorPagarDesc">Valor da conta com desconto:</p>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
