@@ -22,7 +22,7 @@ function calcularAdicionais(){
 function calcularFormaReceber(){
     let formaReceber= document.querySelector("input[name='metodoReceber']");
     for (i=0; i<formaReceber.length; i++){
-        if(formaReceber[i].checked=='Retirada')
+        if(formaReceber[1].checked)
         {
             soma+= 10;
             break
