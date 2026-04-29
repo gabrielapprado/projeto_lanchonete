@@ -24,13 +24,13 @@
             </div>
            
             <div class="row">
-                <div class="col-6">
+                <div class="col-3">
                     <label for="lanches" class="form-label">Lanches:</label>
                     <select name="lanches" id="lanches" class="form-select">
-                        <option value="25" >Hambúrger</option>
-                        <option value="15" >Natural</option>
-                        <option value="15" >Misto</option>
-                        <option value="10" >Promoção do dia</option>
+                        <option value="25">Hambúrger</option>
+                        <option value="15">Natural</option>
+                        <option value="15">Misto</option>
+                        <option value="10">Promoção do dia</option>
                     </select>
                 </div>
                 <div class="col-3">
@@ -61,43 +61,35 @@
                         <option value="5">Refrigerante</option>
                         <option value="10">Suco</option>
                         <option value="2">Água</option>
-
                     </select>
                 </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-3">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="metodoReceber" id="radioBalcao">
-                        <label class="form-check-label" for="radioBalcao">
-                            Balcão
-                        </label>
+                        <label class="form-check-label">Balcão</label>
                     </div>
+
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="metodoReceber" id="radioDelivery" >
-                        <label class="form-check-label" for="radioDelivery">
-                            Delivery
-                        </label>
+                        <input class="form-check-input" type="radio" name="metodoReceber" id="radioDelivery">
+                        <label class="form-check-label">Delivery</label>
                     </div>
+
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="metodoReceber" id="radioRetirada" >
-                        <label class="form-check-label" for="radioRetirada">
-                            Retirada
-                        </label>
+                        <input class="form-check-input" type="radio" name="metodoReceber" id="radioRetirada">
+                        <label class="form-check-label">Retirada</label>
                     </div>
                 </div>
-            
             </div>
+            
 
 
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button value="submit" class="btn btn-primary" type="button" id="calcular" onclick="Calcular()">Calcular</button>
+                <button value="submit" class="btn btn-primary mt-5" type="submit" id="calcular" onclick="Calcular()">Calcular</button>
                 <button class="btn btn-primary" type="button" id="calcularDesc">Calcular Com Desconto</button>
             </div>
-            <p id="ResumoCompra">Resumo da compra:</p>
-            <p id="valorPagar">Valor da conta:</p>
-            <p id="valorPagarDesc">Valor da conta com desconto:</p>
+            <p id="ResumoCompra" class="fs-5 mt-5 ms-3">Resumo do pedido:</p>
+            <p id="valorPagar" class="fs-5 ms-3">Valor da conta:</p>
+            <p id="valorPagarDesc" class="fs-5 ms-3">Valor da conta com desconto:</p>
 
         
         

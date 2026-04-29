@@ -11,7 +11,7 @@ function Calcular(){
     let formaReceber= calcularFormaReceber();
     let valorTotal= valorLanche + valorAdicionais + valorBebidas + formaReceber;
     document.querySelector("#valorPagar").textContent= `Valor da Conta: ${valorTotal} R$`;
-    document.getElementById("ResumoCompra").innerHTML=`Resumo da Compra de ${nome}, mesa: ${mesa}<br>
+    document.getElementById("ResumoCompra").innerHTML=`Resumo do pedido de ${nome}, mesa: ${mesa}<br>
     Lanche: ${nomeLanche}<br>
     Adicionais: ${adicionais}<br>
     Bebidas: ${nomeBebidas}<br>
@@ -24,7 +24,7 @@ function calcularDesc(){
     let valorTotal= Calcular();
     let desconto= 0.1*valorTotal;
     let valorDescontado= valorTotal-desconto; 
-    document.querySelector("#valorPagarDesc").textContent= `Valor com desconto: ${valorDescontado} R$. Desconto: ${desconto} R$.`;
+    document.querySelector("#valorPagarDesc").textContent= `Valor da conta com desconto: ${valorDescontado} R$. Desconto: ${desconto} R$.`;
 }
 
 function calcularAdicionais(){
@@ -75,8 +75,6 @@ function pegarAdcionais(){
 function escolherFormaReceber(){
     let formaReceber= document.querySelector("input[name='metodoReceber']:checked");
 
-     if (!formaReceber) return "Sem adicionais";
-
     if (formaReceber.id == "radioBalcao"){
         return "Balcão";
     } else if (formaReceber.id == "radioDelivery"){
@@ -86,3 +84,9 @@ function escolherFormaReceber(){
     }
     
 }
+document.querySelector("form").addEventListener("submit", enviarFormulario);
+function enviarFormulario(event){
+    event.preventDefault();
+    Calcular();
+
+}            
