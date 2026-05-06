@@ -1,0 +1,4 @@
+
+label{
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+}

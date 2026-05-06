@@ -19,6 +19,13 @@ function Calcular(){
     return valorTotal;
     
 }
+
+document.querySelector("#imprimirPedido").addEventListener('click',function(){
+    window.print();
+})
+
+
+
 document.querySelector("#calcularDesc").addEventListener('click',calcularDesc);
 function calcularDesc(){
     let valorTotal= Calcular();
@@ -84,9 +91,9 @@ function escolherFormaReceber(){
     }
     
 }
-document.querySelector("form").addEventListener("submit", enviarFormulario);
-function enviarFormulario(event){
-    event.preventDefault();
-    Calcular();
+document.querySelector("#novoPedido").addEventListener('click',function(){
+    document.getElementById("formulario").reset();
+   
+});
 
-}            
+            

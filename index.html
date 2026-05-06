@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container-fluid">
-        <form action="" method="">    
-            <div class="alert alert-primary" role="alert">
+        <form action="" method="" id="formulario">    
+            <div class="alert alert-primary text-center fs-4" role="alert">
                 Lanchonete Fatec
             </div>
                 <div class="row">
@@ -84,8 +84,10 @@
 
 
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button value="submit" class="btn btn-primary mt-5" type="submit" id="calcular" onclick="Calcular()">Calcular</button>
+                <button value="submit" class="btn btn-primary mt-5" type="button" id="calcular" onclick="Calcular()">Calcular</button>
                 <button class="btn btn-primary" type="button" id="calcularDesc">Calcular Com Desconto</button>
+                <button class="btn btn-primary" type="button"id="imprimirPedido">Imprimir Pedido</button>
+                <button class="btn btn-primary" type="button" id="novoPedido">Novo Pedido</button>
             </div>
             <p id="ResumoCompra" class="fs-5 mt-5 ms-3">Resumo do pedido:</p>
             <p id="valorPagar" class="fs-5 ms-3">Valor da conta:</p>
